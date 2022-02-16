@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jay's Game of Life simulator</title>
+    <script src="p5.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css"></link>
+  </head>
+  <body>
+    <header><h1>Conway's Game of Life</h1></header>
+    <section><aside id="board-game"></aside></section>
+    <div>TODO: Settings</div>
+    <div>
+      <ul>
+        <li>Any live cell with fewer than 2 neighbors dies</li>
+        <li>Any live cell with more than 3 neighbors dies</li>
+        <li>Any dead cell with 3 live neighbors becomes alive</li>
+      </ul>
+    </div>
+    <footer>
+      <span>Game invented by John Conway.</span> <span>Page implemented by Jay Palacio</span>
+      <span>Inspired by <a href="https://thecodingtrain.com">The Coding Train</a></span>
+    </footer>
+  </body>
+</html>
