@@ -487,3 +487,14 @@ footer {
   display: flex;
   justify-content: space-around;
 }
+.settings {
+  text-align: center;
+}
+#speed {
+  margin: 0.1rem;
+  padding: 0.1rem;
+  width: 15rem;
+}
+label {
+  align-self: center;
+}

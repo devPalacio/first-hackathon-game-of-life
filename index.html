@@ -5,14 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jay's Game of Life simulator</title>
-    <script src="p5.js"></script>
-    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
+    <script defer src="app.js"></script>
     <link rel="stylesheet" href="style.css"></link>
   </head>
   <body>
     <header><h1>Conway's Game of Life</h1></header>
     <section><aside id="board-game"></aside></section>
-    <div>TODO: Settings</div>
+    <section>
+      <aside class="settings">
+        <label for="speed">
+          <input id="speed" type="range" min="1" max="60" value="10" />Speed
+        </label>
+      </aside>
+    </section>
     <div>
       <ul>
         <li>Any live cell with fewer than 2 neighbors dies</li>
