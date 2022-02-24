@@ -1,13 +1,12 @@
 "use strict";
 // globals
-let col = 120;
-let row = 120;
+const col = 120;
+const row = 120;
 let grid = [];
 
-let speedSlider = document.getElementById("speed");
+const speedSlider = document.getElementById("speed");
 speedSlider.addEventListener("change");
 
-console.log(speed);
 // matrix builder
 function makeMatrix(row, col) {
   let arr = new Array(row).fill(null).map(randomGen);
@@ -26,14 +25,12 @@ function randomGen() {
 function setup() {
   let canvas = createCanvas(600, 600);
   canvas.parent("board-game");
-  //frameRate(parseInt(speedSlider.value));
   grid = makeMatrix(row, col);
 }
 function draw() {
   frameRate(parseInt(speedSlider.value));
   // w * rows/cols should equal canvas size
-  let w = 5;
-  let oldgrid = [...grid];
+  const w = 5;
   updateState(grid);
   background(230);
 
@@ -105,16 +102,3 @@ function updateState() {
   }
   return;
 }
-// nice clean way to count neighbors but breaks if you want binary values
-// function countNeighbors(x, y, grid) {
-//   let neighbors = 0;
-//   //loop top
-//   for (let i = -1; i < 2; i++) {
-//     for (let j = -1; j < 2; j++) {
-//       neighbors += grid[(x + i + col) % col][(y + j + row) % row];
-//     }
-//   }
-//   // subtract middle
-//   neighbors -= grid[x][y];
-//   return neighbors;
-// }
